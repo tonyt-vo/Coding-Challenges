@@ -1,34 +1,41 @@
 package LinkedList;
 
 public class LinkedList<E> {
+	
+	// Fields
 	private Node head;
 	private int size;
 
+	// Default Constructor
 	public LinkedList() {
 		this.head = null;
 		this.size = 0;
 	}
 
+	// Constructor for a head node
 	public LinkedList(E data) {
 		head = new Node(data);
 		this.size = 1;
 	}
 
+	// Add a new link
 	public void add(E data) {
+		// Adding first element.
 		if(head == null) {
 			head = new Node(data);
 		}else {
-			Node newNode = new Node(data);
+			
 			Node curr = head;
 			while(curr.hasNext()) {
 				curr = curr.getNext();
 			}
-
+			Node newNode = new Node(data);
 			curr.addNext(newNode);
 		}
 		this.size++;
 	}
 
+	// Remove an item from the List
 	public void remove(E data) {
 		// Case 1: head is null, linkedlist is empty
 		if(head == null) {
@@ -57,11 +64,25 @@ public class LinkedList<E> {
 		}
 	}
 	
+	// Check if list contains an item.
+	public boolean contains(E data) {
+		Node curr = head;
+		while(curr != null) {
+			if(curr.getData() == data) {
+				return true;
+			}
+			curr = curr.getNext();
+		}
+		
+		return false;
+	}
+	
+	// Size getter
 	public int getSize() {
 		return this.size;
 	}
 
-	// 
+	// Returns a visual of the list.
 	public String toString() {
 		Node temp = head;
 		String s = "";

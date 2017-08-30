@@ -14,6 +14,7 @@ public class LinkList_Test {
 		
 		System.out.println(list.toString());
 		System.out.println(list.getSize());
+		System.out.println(list.contains(3));
 	}
 
 }
