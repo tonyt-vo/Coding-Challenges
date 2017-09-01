@@ -1,3 +1,6 @@
+# Other files to ignore
+coding_problems
+
 # Windows image file caches
 Thumbs.db
 ehthumbs.db
@@ -52,3 +55,4 @@ Temporary Items
 /ReverseLinkedList$ListNode.class
 /Node.class
 /Stack.class
+

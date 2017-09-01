@@ -1,4 +1,4 @@
-package RedditChallenges;
+package reddit_challenges;
 // Tony Vo
 // 12/23/16
 // Coding Challenge #277
