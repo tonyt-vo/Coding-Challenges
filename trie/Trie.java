@@ -1,9 +1,9 @@
 package trie;
 
+import java.util.NoSuchElementException;
+
 public class Trie {
 	private TrieNode root;
-	
-	
 	public void add(String s) {
 		if(this.root == null) {
 			this.root = new TrieNode();
@@ -20,6 +20,9 @@ public class Trie {
 	}
 	
 	public boolean search(String s) {
+		if(this.root == null) {
+			throw new NoSuchElementException();
+		}
 		TrieNode curr = this.root;
 		for(int i = 0; i < s.length(); i++) {
 			char c = s.charAt(i);
